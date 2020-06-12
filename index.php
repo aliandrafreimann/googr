@@ -6,6 +6,7 @@ $cacheTime= 300;
 
 if ( file_exists($cacheFile) && (time() - filemtime($cacheFile)) <$cacheTime ) {
     $content = file_get_contents($cacheFile);
+    echo "weather:";
 } else {
     $content = file_get_contents($url);
     echo "api";
